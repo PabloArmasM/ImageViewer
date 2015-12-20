@@ -2,6 +2,10 @@
 package application;
 
 import control.Command;
+import java.awt.BorderLayout;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.PopupMenu;
 import java.util.HashMap;
 import java.util.Map;
 import javax.swing.JFrame;
@@ -21,10 +25,23 @@ public class Application extends JFrame{
     }
 
     private void deployUI() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.setTitle("ImageViewer");
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setMinimumSize(new Dimension(500, 500));
+        this.setLocationRelativeTo(null);
+        this.getContentPane().add(imagePanel());
+        this.getContentPane().add(toolbar(), BorderLayout.SOUTH);
     }
 
     private void createCommands() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private PopupMenu imagePanel() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private Component toolbar() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
