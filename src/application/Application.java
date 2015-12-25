@@ -2,6 +2,8 @@
 package application;
 
 import control.Command;
+import control.NextImageCommand;
+import control.PrevImageCommand;
 import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.Dimension;
@@ -34,7 +36,8 @@ public class Application extends JFrame{
     }
 
     private void createCommands() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        commands.put("next", new NextImageCommand(imageDisplay));
+        commands.put("prev", new PrevImageCommand(imageDisplay));
     }
 
     private PopupMenu imagePanel() {
