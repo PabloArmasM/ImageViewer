@@ -41,7 +41,9 @@ public class Application extends JFrame{
     }
 
     private PopupMenu imagePanel() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ImagePanel imagePanel = new ImagePanel(getImage());
+        imageDisplay = imagePanel;
+        return imagePanel; 
     }
 
     private Component toolbar() {
