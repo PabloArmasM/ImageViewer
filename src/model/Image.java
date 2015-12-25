@@ -1,6 +1,10 @@
 
 package model;
 
-public class Image {
-
+public interface Image {
+    
+    public Object bitmap();
+    public Image prev();
+    public Image next();
+    
 }

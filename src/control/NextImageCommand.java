@@ -1,17 +1,18 @@
-
 package control;
 
 import view.ImageDisplay;
 
-public class NextImageCommand implements Command{
+public class NextImageCommand implements Command {
+
+    private final ImageDisplay imageDisplay;
 
     public NextImageCommand(ImageDisplay imageDisplay) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.imageDisplay = imageDisplay;
     }
-
+    
     @Override
     public void execute() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        imageDisplay.show(imageDisplay.image().next());
     }
 
 }
