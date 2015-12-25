@@ -11,6 +11,7 @@ import java.awt.PopupMenu;
 import java.util.HashMap;
 import java.util.Map;
 import javax.swing.JFrame;
+import model.Image;
 import view.ImageDisplay;
 
 public class Application extends JFrame{
@@ -48,6 +49,10 @@ public class Application extends JFrame{
 
     private Component toolbar() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private Image getImage() {
+        return new FileImageReader("/Users/Loedded/Documents").read();
     }
     
 }
