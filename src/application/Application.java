@@ -9,8 +9,11 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.PopupMenu;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.Map;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import model.Image;
@@ -60,12 +63,28 @@ public class Application extends JFrame{
         return new FileImageReader("/Users/Loedded/Documents").read();
     }
 
-    private PopupMenu prevButton() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private JButton nextButton() {
+        JButton nextButton = new JButton(">>");
+        nextButton.addActionListener(doCommand("next"));
+        return nextButton;
     }
 
-    private PopupMenu nextButton() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private JButton prevButton() {
+        JButton prevButton = new JButton("<<");
+        prevButton.addActionListener(doCommand("prev"));
+        return prevButton;
     }
+
+    private ActionListener doCommand(final String operation) {
+        return new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                commands.get(operation).execute();
+            }
+        };
+    }
+
+
     
 }
