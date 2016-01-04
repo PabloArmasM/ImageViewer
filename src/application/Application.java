@@ -46,7 +46,7 @@ public class Application extends JFrame{
         commands.put("prev", new PrevImageCommand(imageDisplay));
     }
 
-    private PopupMenu imagePanel() {
+    private ImagePanel imagePanel() {
         ImagePanel imagePanel = new ImagePanel(getImage());
         imageDisplay = imagePanel;
         return imagePanel; 
